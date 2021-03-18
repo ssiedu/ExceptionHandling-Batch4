@@ -1,6 +1,4 @@
-
-public class Demo {
-
+public class Test {
     public static void main(String[] args) {
         System.out.println("Begin-of-Program................");
         int n1 = 0, n2 = 0, res = 0;
@@ -13,10 +11,8 @@ public class Demo {
             res = n1 / n2;
         } catch (ArithmeticException e) {
             res = n1 / 2;
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid Numbers........");
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Insufficient Values........");
+        } catch (NumberFormatException | ArrayIndexOutOfBoundsException  e) {
+            System.out.println("Invalid Inputs........");
         } catch (Exception e) {
             System.out.println("Unknown Problem.......");
         }
