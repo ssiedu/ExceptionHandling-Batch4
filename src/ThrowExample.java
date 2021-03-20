@@ -8,7 +8,8 @@ public class ThrowExample {
             
             if(n2>n1){
                 //if yes,then we will throw ArithmeticException
-                ArithmeticException ob=new ArithmeticException();
+                //ArithmeticException ob=new ArithmeticException();
+                BigNumberException ob=new BigNumberException();
                 throw ob;
             }
             
@@ -17,6 +18,8 @@ public class ThrowExample {
         }catch (ArithmeticException  e) {
             System.out.println("Arithmetic Exception Handled ........");
             res = n1/2;
+        }catch (BigNumberException e){
+            System.out.println("First Number Must Be Bigger Than Second  One...");
         }
 
         System.out.println("Result : " + res);
